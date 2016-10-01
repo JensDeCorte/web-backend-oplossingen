@@ -34,7 +34,7 @@
 	
 	<!-- deel 2 -->
 
-	<p> <?php echo strpos($fruit2, 'a' [, $offset = -1]) ?> </p>
+	<p> <?php echo strripos( $fruit2, 'a') ?> </p>
 	<p> <?php echo strtoupper($fruit2) ?> </p>
 
 
