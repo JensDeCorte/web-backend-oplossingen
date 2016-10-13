@@ -9,8 +9,7 @@
 	$letters = array_reverse($tekstchars);
 
 	$hoeveelLetters = array();
-
-	$lettercounter = 0;
+	
 
 	foreach($letters as $letter)
 	{
