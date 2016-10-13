@@ -11,7 +11,7 @@
 			$nieuwGeld = $geld + $renteGeld;
 			$bedragelkjaar[$teller]= 'Rente = ' . $renteGeld . '€ --- Nieuw geld = ' . $nieuwGeld . '€';
 
-			++$teller;
+			$teller++;
 
 			return renteCalculate( $nieuwGeld, $percentage, $duurtijd );
 		}

@@ -7,9 +7,9 @@
 		{
 			$renteGeld = floor( $data['geld'] * ( $data['rentepercentage'] / 100 ) );
 			$data['geld'] += $renteGeld;
-			$data['bedragelkjaar'][ $data[ 'teller' ] ] = 'Nieuw geld = ' . $data['geld'] . '€ --- Rente = ' . $renteGeld . '€';
+			$data['bedragelkjaar'][ $data['teller'] ] = 'Nieuw geld = ' . $data['geld'] . '€ --- Rente = ' . $renteGeld . '€';
 
-			++$data[ 'teller' ];
+			$data['teller']++;
 
 			return berekenKapitaal( $data );
 		}
@@ -19,9 +19,9 @@
 		}
 	}
 
-	$startGeld 	=	100000;
-	$rente		=	8;
-	$aantaljaar		=	10;
+	$startGeld = 100000;
+	$rente = 8;
+	$aantaljaar = 10;
 
 	$winst = berekenKapitaal( array( 'geld' => $startGeld, 'rentepercentage' => $rente, 'duurtijd' => $aantaljaar,'teller'	=> 1,'bedragelkjaar' =>	array() ) );
 
