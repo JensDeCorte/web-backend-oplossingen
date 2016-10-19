@@ -80,12 +80,9 @@
 	if(isset( $_GET['id']))
 	{
 		$id = $_GET['id'];
-
-		if(array_key_exists($id, $artikels))
-		{
-			$artikels = array($artikels[$id]);
-			$volledigartikel =true;
-		}
+		
+		$artikels = array($artikels[$id]);
+		$volledigartikel =true;
 	}
 
 ?>
