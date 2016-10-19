@@ -162,6 +162,4 @@
 		border-radius: 20px;
 	}
 
-	/*.artikel-lastchild*/
-
 </style>
