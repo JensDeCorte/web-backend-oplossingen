@@ -33,10 +33,6 @@
 								'beschrijving' => $beschrijving3 ) );
 
 
-	/*$artikels = array(  	'titel' => array($titel1, $titel2, $titel3) ,
-							'paragraaf' => array($paragraaf1, $paragraaf2, $paragraaf3) ,
-							'afbeelding' => array($afbeelding1, $afbeelding2, $afbeelding3) ,
-							'beschrijving' => array($beschrijving1, $beschrijving2, $beschrijving3) )*/
 
 	/*    WERKEND
 	$titels = array($titel1, $titel2, $titel3);
@@ -117,16 +113,14 @@
 		?>	
 	</p>
 	<p>
-	<?php
-		if($volledigartikel)
-		{
-			echo "<a href='http://web-backend.local/oplossingen/opdracht-get/opdracht-get.php'>Vorige</a>";
-		}
-		else
-		{ 
-			echo "<a href='http://web-backend.local/oplossingen/opdracht-get/opdracht-get.php?id=".$id."'>Lees meer</a>";
-		}
-	?>
+	<?php if($volledigartikel): ?>
+		
+			<a href='http://web-backend.local/oplossingen/opdracht-get/opdracht-get.php'>Vorige</a>
+		
+	<?php	else: ?>
+		<a href='http://web-backend.local/oplossingen/opdracht-get/opdracht-get.php?id=<?= $id ?>'>Lees meer</a>
+		
+	<?php endif ?>
 	</p>
 	<figure>
 		<img src=" <?= $artikel['afbeelding'] ?> ">

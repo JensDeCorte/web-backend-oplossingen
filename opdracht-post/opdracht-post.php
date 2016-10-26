@@ -6,14 +6,14 @@
 	$ingegevenUsername = 'niets ingevuld';
 	$ingegevenPassword = 'niets ingevuld';
 
-	$ingegevenUsername = ( isset($_POST['username']) ? strval($_POST['username']) : 'niets ingevuld');
-	$ingegevenPassword = ( isset($_POST['password']) ? strval($_POST['password']) : 'niets ingevuld');
+	$ingegevenUsername = ( isset($_POST['username']) ? strval($_POST['username']) : '');
+	$ingegevenPassword = ( isset($_POST['password']) ? strval($_POST['password']) : '');
 
 
 	$zijnGegevensCorrect = '';
 	$message = '';
 
-	if($ingegevenUsername != 'niets ingevuld' && $ingegevenPassword != 'niets ingevuld')
+	if($ingegevenUsername != '' && $ingegevenPassword != '')
 	{
 		if($username == $ingegevenUsername && $password == $ingegevenPassword)
 		{
@@ -47,12 +47,12 @@
 	<ul>
 		<li>
 			<label for="username">Gebruikersnaam: </label>
-			<input type="text" name="username" id="username">
+			<input type="text" name="username" id="username" value="<?= $ingegevenUsername ?>">
 		</li>
 
 		<li>
 			<label for="password">Paswoord: </label>
-			<input type="password" name="password" id="password">
+			<input type="password" name="password" id="password" value="<?= $ingegevenPassword ?>">
 		</li>
 	</ul>
 
