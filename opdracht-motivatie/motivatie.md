@@ -20,6 +20,6 @@ Neem deze tekst over in je eigen document en schrijf onder deze tekst wat hierbo
 Na het middelbaar wou ik eerst voor politie-agent gaan. Ik heb dan ook de proeven afgelegd, maar ik was hiervoor niet geslaagd. Dan heb ik lang aan het zoeken geweest naar een studierichting die ik echt interessant vond en nadat ik op de opendeurdag bij verschillende scholen en richtingen was langsgegaan wou ik MT studeren en wou ik verder gaan in Audio/Video. Vorig jaar had ik de keuze Audio/Video aangeduid en had ik hier enkele 2de-jaarsvakken van, maar toen ik dan het programmeren onder de knie kreeg vond ik het leuk en heb ik ervoor gekozen om dit jaar over te schakelen naar Web/UX.
  
 ##Feedback voor de cursus web backend
-'Positief:' De cursus begint volledig van 0 en zo kan je eigenlijk perfect aan de cursus beginnen als je nog nooit programmeren zou gehad hebben. Je herhaalt eerst de basisbegrippen zoals strings, arrays, ... alvorens je aan het moeilijkere werk begint en door deze opbouw kan je goed volgen.
+`Positief:` De cursus begint volledig van 0 en zo kan je eigenlijk perfect aan de cursus beginnen als je nog nooit programmeren zou gehad hebben. Je herhaalt eerst de basisbegrippen zoals strings, arrays, ... alvorens je aan het moeilijkere werk begint en door deze opbouw kan je goed volgen.
 
-'Negatief:' Misschien hier en daar ergens toevoegen wat de veelgemaakte fouten zijn zodat men daarop kan letten.
+`Negatief:` Misschien hier en daar ergens toevoegen wat de veelgemaakte fouten zijn zodat men daarop kan letten.
