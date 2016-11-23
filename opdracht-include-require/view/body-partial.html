@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Body-partial</title>
+</head>
+<body>
+
+	<?php foreach($artikels as $element => $artikel): ?>
+
+		<div class="artikel">
+			<h3><?= $artikel[ 'title' ] ?></h3>
+			<p><?= $artikel[ 'text' ] ?></p>
+		</div>
+
+	<?php endforeach ?>
+
+</body>
+</html>
