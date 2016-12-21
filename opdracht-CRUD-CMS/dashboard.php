@@ -1,6 +1,5 @@
 <?php
 
-
 	session_start();
 
 
@@ -12,11 +11,11 @@
 
 		try
 		{
-			$db = new PDO('mysql:host=localhost;dbname=opdracht-security-login', 'root', '', array (PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+			$db = new PDO('mysql:host=localhost;dbname=opdracht-CRUD-CMS', 'root', '', array (PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 		}
 		catch( PDOException $e )
 		{
-			$message = 'Geen connectie: ' . $e->getMessage();
+			$message='Geen connectie: ' . $e->getMessage();
 		}
 
 		$query = $db->prepare('SELECT hashed_password,salt FROM users WHERE email=:emailofcookie');
@@ -25,11 +24,10 @@
 		$result = $query->fetch( PDO:: FETCH_ASSOC);
 		$hashandsaltofdatabase = $result["hashed_password"].$result["salt"];
 
-		if($hashandsaltofcookie == $hashandsaltofdatabase) 
+		if($hashandsaltofcookie==$hashandsaltofdatabase) 
 		{
-			$login=true;
+			$login = true;
 		}
-
 		else
 		{
 			$_SESSION["notification"]="Er is iets fout gegaan, we denken dat er geknoeid is met de cookie";
@@ -39,12 +37,14 @@
 	}
 	else
 	{
-		header("Location: registratie.php"); /* Redirect browser */
+		header("Location: registratie.php");
 		exit();
 	}
-	if(isset($_GET["uitloggen"])) 
+
+
+	if (isset($_GET["uitloggen"])) 
 	{
-		if($_GET["uitloggen"]=="true") 
+		if ($_GET["uitloggen"]=="true") 
 		{
 			setcookie("login", "", time() - 3600);
 			$_SESSION["notification"]="U bent uitgelogd! Tot de volgende keer!";
@@ -52,7 +52,6 @@
 			exit();
 		}
 	}
-
 
 ?>
 
@@ -63,11 +62,12 @@
 	<title>Dashboard</title>
 </head>
 <body>
-
 	<?php if ($login): ?>
+		<a href="dashboard.php">Mijn dashboard</a>
+		<p>Ingelogd als <?=$email ?>
+		<a href="dashboard.php?uitloggen=true">Uitloggen</a>
 		<h1>Uw dashboard</h1>
-		<a href="?uitloggen=true">Uitloggen</a>
+		<a href="artikel-overzicht.php">Artikels</a>
 	<?php endif ?>
-
 </body>
 </html>
